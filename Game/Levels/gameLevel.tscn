@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://nwj5qq0w3qwn"]
+[gd_scene load_steps=3 format=4 uid="uid://nwj5qq0w3qwn"]
 
 [ext_resource type="PackedScene" uid="uid://dcc2dbr85eb18" path="res://Game/Characters/player.tscn" id="1_v3pup"]
+[ext_resource type="TileSet" uid="uid://jxup5v4jq6uv" path="res://Art/Sprites/Placeholder Art/Blocks/blocks.tres" id="2_jgcso"]
 
 [node name="GameLevel" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_v3pup")]
 z_index = 1
 position = Vector2(671, 257)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(0.2, 0.2)
+tile_map_data = PackedByteArray("AABgACwABQAAAAAAAABjACwABQAAAAAAAABmACwABQAAAAAAAABpACwABQAAAAAAAABsACwABQAAAAAAAABdACwABQAAAAAAAABdACkABQAAAAAAAABgACkABQAAAAAAAABjACkABQAAAAAAAABmACkABQAAAAAAAABpACkABQAAAAAAAABsACkABQAAAAAAAABvACkABQAAAAAAAABvACwABQAAAAAAAAByACkABgAAAAAAAAByACwABgAAAAAAAAByACYABgAAAAAAAAByACMABgAAAAAAAAByACAABgAAAAAAAABdACYABAAAAAAAAABdACMABAAAAAAAAABgACMABAAAAAAAAABgACYABAAAAAAAAABjACMABAAAAAAAAABjACYABAAAAAAAAABmACMABAAAAAAAAABmACYABAAAAAAAAABpACMABAAAAAAAAABpACYABAAAAAAAAABsACMABAAAAAAAAABsACYABAAAAAAAAABvACYABAAAAAAAAABvACMABAAAAAAAAAA=")
+tile_set = ExtResource("2_jgcso")
